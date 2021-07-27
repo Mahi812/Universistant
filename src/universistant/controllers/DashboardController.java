@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -17,6 +18,17 @@ import javafx.fxml.Initializable;
  * @author ocean
  */
 public class DashboardController implements Initializable {
+
+    @FXML
+    private Button Home;
+    @FXML
+    private Button View_Marks;
+    @FXML
+    private Button View_Attendance;
+    @FXML
+    private Button Course_Reg;
+    @FXML
+    private Button Exit;
 
     /**
      * Initializes the controller class.
@@ -27,7 +39,23 @@ public class DashboardController implements Initializable {
     }    
 
     @FXML
-    private void Button(ActionEvent event) {
+    private void clickHome(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickViewMarks(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickViewAttendance(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickCourseReg(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickExit(ActionEvent event) {
     }
     
 }
