@@ -7,7 +7,10 @@ package universistant.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -16,6 +19,19 @@ import javafx.fxml.Initializable;
  */
 public class Admin_dashboardController implements Initializable {
 
+    @FXML
+    private Button Home;
+    @FXML
+    private Button Exit;
+    @FXML
+    private Button Add_Teacher;
+    @FXML
+    private Button Add_Course;
+    @FXML
+    private Button Add_Student;
+    @FXML
+    private Button Assign_Teacher;
+
     /**
      * Initializes the controller class.
      */
@@ -23,5 +39,29 @@ public class Admin_dashboardController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void clickHome(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickExit(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickAddTeacher(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickAddCourse(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickAddStudent(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickAssignTeacher(ActionEvent event) {
+    }
     
 }
