@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="804.0" style="-fx-background-color: #008B8B;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universistant.controllers.Teacher_dashboardController">
    <stylesheets>
-      <URL value="@resources/style/teacher_dashboard.css" />
+      <URL value="@/resources/style/teacher_dashboard.css" />
    </stylesheets>
    <children>
       <AnchorPane prefHeight="119.0" prefWidth="822.0" style="-fx-background-color: #20B2AA;">
