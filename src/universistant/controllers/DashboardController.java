@@ -11,6 +11,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -22,13 +26,14 @@ public class DashboardController implements Initializable {
     @FXML
     private Button Home;
     @FXML
+    private Button Exit;
+    @FXML
     private Button View_Marks;
     @FXML
     private Button View_Attendance;
     @FXML
     private Button Course_Reg;
-    @FXML
-    private Button Exit;
+
 
     /**
      * Initializes the controller class.
@@ -40,6 +45,11 @@ public class DashboardController implements Initializable {
 
     @FXML
     private void clickHome(ActionEvent event) {
+    }
+
+
+    @FXML
+    private void clickExit(ActionEvent event) {
     }
 
     @FXML
@@ -54,8 +64,7 @@ public class DashboardController implements Initializable {
     private void clickCourseReg(ActionEvent event) {
     }
 
-    @FXML
-    private void clickExit(ActionEvent event) {
-    }
+
+
     
 }

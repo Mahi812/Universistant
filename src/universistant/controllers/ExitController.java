@@ -7,7 +7,10 @@ package universistant.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -16,6 +19,11 @@ import javafx.fxml.Initializable;
  */
 public class ExitController implements Initializable {
 
+    @FXML
+    private Button YesButton;
+    @FXML
+    private Button NoButton;
+
     /**
      * Initializes the controller class.
      */
@@ -23,5 +31,13 @@ public class ExitController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void clickExitYes(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickExitNo(ActionEvent event) {
+    }
     
 }
