@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="804.0" style="-fx-background-color: #008B8B;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universistant.controllers.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="804.0" style="-fx-background-color: #008B8B;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universistant.controllers.Add_studentController">
    <stylesheets>
-      <URL value="@resources/style/dashboard.css" />
+      <URL value="@resources/style/add_student.css" />
    </stylesheets>
    <children>
       <AnchorPane prefHeight="509.0" prefWidth="239.0" style="-fx-background-color: #20B2AA;">

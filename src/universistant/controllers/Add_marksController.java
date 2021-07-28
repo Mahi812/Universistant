@@ -7,7 +7,10 @@ package universistant.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -16,6 +19,15 @@ import javafx.fxml.Initializable;
  */
 public class Add_marksController implements Initializable {
 
+    @FXML
+    private Button Home;
+    @FXML
+    private Button Add_Marks;
+    @FXML
+    private Button Add_Attendance;
+    @FXML
+    private Button Exit;
+
     /**
      * Initializes the controller class.
      */
@@ -23,5 +35,21 @@ public class Add_marksController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void clickHome(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickAddMarks(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickAddAttendance(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickExit(ActionEvent event) {
+    }
     
 }

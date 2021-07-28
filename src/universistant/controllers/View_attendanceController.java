@@ -7,7 +7,10 @@ package universistant.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -16,6 +19,17 @@ import javafx.fxml.Initializable;
  */
 public class View_attendanceController implements Initializable {
 
+    @FXML
+    private Button Home;
+    @FXML
+    private Button View_Marks;
+    @FXML
+    private Button View_Attendance;
+    @FXML
+    private Button Course_Reg;
+    @FXML
+    private Button Exit;
+
     /**
      * Initializes the controller class.
      */
@@ -23,5 +37,25 @@ public class View_attendanceController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void clickHome(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickViewMarks(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickViewAttendance(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickCourseReg(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickExit(ActionEvent event) {
+    }
     
 }
