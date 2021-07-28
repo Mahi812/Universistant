@@ -8,7 +8,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="218.0" prefWidth="404.0" style="-fx-background-color: #20B2AA;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="universistant.controllers.ExitController">
     <stylesheets>
-        <URL value="@resources/style/exit.css" />
+        <URL value="@/resources/style/exit.css" />
     </stylesheets>
    <children>
       <AnchorPane prefHeight="79.0" prefWidth="404.0" style="-fx-background-color: #008B8B;">
