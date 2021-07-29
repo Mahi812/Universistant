@@ -5,12 +5,15 @@
  */
 package universistant.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -29,6 +32,8 @@ public class View_marksController implements Initializable {
     private Button Course_Reg;
     @FXML
     private Button Exit;
+    @FXML
+    private AnchorPane background;
 
     /**
      * Initializes the controller class.
@@ -39,23 +44,33 @@ public class View_marksController implements Initializable {
     }    
 
     @FXML
-    private void clickHome(ActionEvent event) {
+    private void clickHome(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/home.fxml"));
+        background.getChildren().setAll(pane);
     }
 
     @FXML
-    private void clickViewMarks(ActionEvent event) {
+    private void clickViewMarks(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/view_marks.fxml"));
+        background.getChildren().setAll(pane);
     }
 
     @FXML
-    private void clickViewAttendance(ActionEvent event) {
+    private void clickViewAttendance(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/view_attendance.fxml"));
+        background.getChildren().setAll(pane);
     }
 
     @FXML
-    private void clickCourseReg(ActionEvent event) {
+    private void clickCourseReg(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/course_registration.fxml"));
+        background.getChildren().setAll(pane);
     }
 
     @FXML
-    private void clickExit(ActionEvent event) {
+    private void clickExit(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/exit.fxml"));
+        background.getChildren().setAll(pane);
     }
     
 }
