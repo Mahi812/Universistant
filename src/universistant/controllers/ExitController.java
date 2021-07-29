@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -23,6 +24,8 @@ public class ExitController implements Initializable {
     private Button YesButton;
     @FXML
     private Button NoButton;
+    @FXML
+    private AnchorPane background;
 
     /**
      * Initializes the controller class.

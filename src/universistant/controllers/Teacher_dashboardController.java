@@ -5,12 +5,15 @@
  */
 package universistant.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -27,6 +30,8 @@ public class Teacher_dashboardController implements Initializable {
     private Button Add_Marks;
     @FXML
     private Button Add_Attendance;
+    @FXML
+    private AnchorPane background;
 
     /**
      * Initializes the controller class.
@@ -37,19 +42,27 @@ public class Teacher_dashboardController implements Initializable {
     }    
 
     @FXML
-    private void clickHome(ActionEvent event) {
+    private void clickHome(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/teacher_dashboard.fxml"));
+        background.getChildren().setAll(pane);
     }
 
     @FXML
-    private void clickExit(ActionEvent event) {
+    private void clickExit(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/exit.fxml"));
+        background.getChildren().setAll(pane);
     }
 
     @FXML
-    private void clickAddMarks(ActionEvent event) {
+    private void clickAddMarks(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/add_marks.fxml"));
+        background.getChildren().setAll(pane);
     }
 
     @FXML
-    private void clickAddAttendance(ActionEvent event) {
+    private void clickAddAttendance(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/add_attendance.fxml"));
+        background.getChildren().setAll(pane);
     }
     
 }
