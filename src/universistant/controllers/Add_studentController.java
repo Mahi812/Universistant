@@ -15,6 +15,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -40,6 +42,16 @@ public class Add_studentController implements Initializable {
     private Button Exit;
     @FXML
     private AnchorPane background;
+    @FXML
+    private TextField Username_TextField;
+    @FXML
+    private Button Register;
+    @FXML
+    private RadioButton bsc;
+    @FXML
+    private RadioButton msc;
+    @FXML
+    private RadioButton phd;
 
     /**
      * Initializes the controller class.
@@ -88,6 +100,22 @@ public class Add_studentController implements Initializable {
     private void clickAssignTeacher(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/assign_course.fxml"));
         background.getChildren().setAll(pane);
+    }
+
+    @FXML
+    private void click_Register(ActionEvent event) {
+    }
+
+    @FXML
+    private void click_bsc(ActionEvent event) {
+    }
+
+    @FXML
+    private void click_msc(ActionEvent event) {
+    }
+
+    @FXML
+    private void click_phd(ActionEvent event) {
     }
     
 }
