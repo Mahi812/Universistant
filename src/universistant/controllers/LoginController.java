@@ -18,6 +18,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -49,8 +50,42 @@ public class LoginController implements Initializable {
 
     @FXML
     private void click_SignIn(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/admin_dashboard.fxml"));
-        background.getChildren().setAll(pane);
+        
+        String uname = Username_TextField.getText();
+        String pass = Password_TextField.getText();
+        
+        if(uname.equals("") && pass.equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "Username or Password blank");
+            //flagx=true;
+            
+        }
+        else if(uname.equals("student") && pass.equals("student"))
+        {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/student_dashboard.fxml"));
+            background.getChildren().setAll(pane);
+            //JOptionPane.showMessageDialog(null, "Username or Password blank");
+            //flagx=true;            
+        }
+        else if(uname.equals("teacher") && pass.equals("teacher"))
+        {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/teacher_dashboard.fxml"));
+            background.getChildren().setAll(pane);
+            //JOptionPane.showMessageDialog(null, "Username or Password blank");
+            //flagx=true;            
+        }  
+        else if(uname.equals("admin") && pass.equals("admin"))
+        {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/admin_dashboard.fxml"));
+            background.getChildren().setAll(pane);
+            //JOptionPane.showMessageDialog(null, "Username or Password blank");
+            //flagx=true;            
+        }  
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Wrong Username or Password");
+        }
+             
     }
     
 }

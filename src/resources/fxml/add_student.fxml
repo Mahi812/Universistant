@@ -3,12 +3,16 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="background" prefHeight="509.0" prefWidth="804.0" style="-fx-background-color: #008B8B;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universistant.controllers.Add_studentController">
+<AnchorPane id="AnchorPane" fx:id="background" prefHeight="509.0" prefWidth="804.0" style="-fx-background-color: #008B8B;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universistant.controllers.Add_studentController">
    <stylesheets>
       <URL value="@/resources/style/add_student.css" />
    </stylesheets>
@@ -58,5 +62,61 @@
             <Text layoutX="68.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Universistant, 2021" wrappingWidth="104.13671875" />
          </children>
       </AnchorPane>
+      <TextField fx:id="Username_TextField" layoutX="518.0" layoutY="170.0" prefHeight="32.0" prefWidth="200.0" promptText="Name" />
+      <Button fx:id="Register" layoutX="452.0" layoutY="406.0" mnemonicParsing="false" onAction="#click_Register" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 5;" text="Register">
+         <font>
+            <Font name="HP Simplified" size="13.0" />
+         </font>
+      </Button>
+      <Text fill="#fcfcfc" layoutX="365.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font name="HP Simplified" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#f8f8f8" layoutX="365.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Session">
+         <font>
+            <Font name="HP Simplified" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="408.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Registration" wrappingWidth="260.2900085449219">
+         <font>
+            <Font name="HP Simplified" size="30.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="bsc" layoutX="524.0" layoutY="346.0" mnemonicParsing="false" onAction="#click_bsc" text="B.Sc " textFill="WHITE" />
+      <RadioButton fx:id="msc" layoutX="593.0" layoutY="346.0" mnemonicParsing="false" onAction="#click_msc" text="M.Sc " textFill="WHITE" />
+      <RadioButton fx:id="phd" layoutX="662.0" layoutY="346.0" mnemonicParsing="false" onAction="#click_phd" text="P.hD" textFill="WHITE" />
+      <SplitMenuButton layoutX="518.0" layoutY="286.0" mnemonicParsing="false" text="Select Department">
+        <items>
+          <MenuItem mnemonicParsing="false" text="CSE" />
+            <MenuItem mnemonicParsing="false" text="CEE" />
+          <MenuItem mnemonicParsing="false" text="MPE" />
+            <MenuItem mnemonicParsing="false" text="BTM" />
+          <MenuItem mnemonicParsing="false" text="EEE" />
+        </items>
+      </SplitMenuButton>
+      <Text fill="#f8f8f8" layoutX="365.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department">
+         <font>
+            <Font name="HP Simplified" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#f8f8f8" layoutX="363.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Program">
+         <font>
+            <Font name="HP Simplified" size="18.0" />
+         </font>
+      </Text>
+      <SplitMenuButton layoutX="518.0" layoutY="229.0" mnemonicParsing="false" text="Select Session">
+         <items>
+            <MenuItem mnemonicParsing="false" text="2020" />
+            <MenuItem mnemonicParsing="false" text="2021" />
+            <MenuItem mnemonicParsing="false" text="2022" />
+            <MenuItem mnemonicParsing="false" text="2023" />
+            <MenuItem mnemonicParsing="false" text="2024" />
+            <MenuItem mnemonicParsing="false" text="2025" />
+            <MenuItem mnemonicParsing="false" text="2026" />
+            <MenuItem mnemonicParsing="false" text="2027" />
+            <MenuItem mnemonicParsing="false" text="2028" />
+         </items>
+      </SplitMenuButton>
    </children>
 </AnchorPane>

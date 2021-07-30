@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -37,10 +38,13 @@ public class ExitController implements Initializable {
 
     @FXML
     private void clickExitYes(ActionEvent event) {
+        System.exit(0);
     }
 
     @FXML
     private void clickExitNo(ActionEvent event) {
+        Stage stage = (Stage) NoButton.getScene().getWindow();
+        stage.close();
     }
     
 }
