@@ -8,12 +8,24 @@ package universistant.controllers;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -53,8 +65,13 @@ public class Admin_dashboardController implements Initializable {
 
     @FXML
     private void clickExit(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/exit.fxml"));
-        background.getChildren().setAll(pane);
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/exit.fxml"));
+        Scene scene = new Scene(root, 404,218);
+        Stage stage = new Stage();
+        //stage.setTitle("Exit");
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.show();
     }
 
     @FXML
