@@ -46,8 +46,7 @@ public class Add_attendanceController implements Initializable {
         // TODO
     }    
 
-    @FXML
-    private void clickHome(ActionEvent event) throws IOException {
+    private void clickHomeViaTeacher(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/teacher_dashboard.fxml"));
         background.getChildren().setAll(pane);
     }
@@ -74,5 +73,8 @@ public class Add_attendanceController implements Initializable {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/add_attendance.fxml"));
         background.getChildren().setAll(pane);
     }
+
+    
+
     
 }

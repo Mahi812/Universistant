@@ -7,9 +7,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="background" prefHeight="509.0" prefWidth="804.0" style="-fx-background-color: #008B8B;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="universistant.controllers.Student_dashboardController">
+<AnchorPane id="AnchorPane" fx:id="background" prefHeight="509.0" prefWidth="804.0" style="-fx-background-color: #008B8B;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universistant.controllers.Student_dashboardController">
    <stylesheets>
-      <URL value="@/resources/style/student_dashboard.css" />
+      <URL value="@/resources/style/stylesheet.css" />
    </stylesheets>
    <children>
       <AnchorPane prefHeight="119.0" prefWidth="822.0" style="-fx-background-color: #20B2AA;">
@@ -21,7 +21,7 @@
             </Text>
          </children>
       </AnchorPane>
-      <Button fx:id="Home" layoutX="124.0" layoutY="149.0" mnemonicParsing="false" onAction="#clickHome" prefHeight="96.0" prefWidth="227.0" style="-fx-background-color: #48D1CC; -fx-background-radius: 10;" text="Home">
+      <Button fx:id="Home" layoutX="124.0" layoutY="149.0" mnemonicParsing="false" onAction="#clickHomeViaStudent" prefHeight="96.0" prefWidth="227.0" style="-fx-background-color: #48D1CC; -fx-background-radius: 10;" text="Home">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

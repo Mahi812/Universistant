@@ -5,20 +5,28 @@
  */
 package universistant.controllers;
 
+import java.sql.*;
+//import com.mysql.jdbc.PreparedStatement;
+import java.sql.PreparedStatement;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javax.swing.JOptionPane;
+
 
 /**
  * FXML Controller class
@@ -39,6 +47,9 @@ public class LoginController implements Initializable {
     private Button SignIn_Button;
     @FXML
     private AnchorPane background;
+    
+    Connection con;
+    PreparedStatement pst;
 
     /**
      * Initializes the controller class.
@@ -49,43 +60,68 @@ public class LoginController implements Initializable {
     }    
 
     @FXML
-    private void click_SignIn(ActionEvent event) throws IOException {
+    private void click_SignIn(ActionEvent event) throws IOException, ClassNotFoundException, SQLException {
+        
+        boolean flag=false;
+        boolean flagx=false;
         
         String uname = Username_TextField.getText();
         String pass = Password_TextField.getText();
         
-        if(uname.equals("") && pass.equals(""))
+        if(uname.equals("") || pass.equals(""))
         {
             JOptionPane.showMessageDialog(null, "Username or Password blank");
-            //flagx=true;
-            
+            flagx=true;
         }
-        else if(uname.equals("student") && pass.equals("student"))
+        
+        if(!flagx)
         {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/student_dashboard.fxml"));
-            background.getChildren().setAll(pane);
-            //JOptionPane.showMessageDialog(null, "Username or Password blank");
-            //flagx=true;            
+        
+            Class.forName("com.mysql.jdbc.Driver");        
+            con = DriverManager.getConnection("jdbc:mysql://localhost/universistantdb", "root","root");
+        
+            Statement st = con.createStatement();
+            ResultSet res = st.executeQuery("SELECT * FROM  login");
+        
+            while(res.next())
+            {
+                String name=res.getString("Username");
+                String passw=res.getString("Password");
+                int role=res.getInt("Role");
+           
+                if(name.equals(uname) && passw.equals(pass))
+                {
+                    
+                    flag=true;
+                
+                    if(role==1)
+                    {
+                        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/admin_dashboard.fxml"));
+                        background.getChildren().setAll(pane);
+                    }
+                
+                    else if(role==2)
+                    {
+                        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/teacher_dashboard.fxml"));
+                        background.getChildren().setAll(pane);
+                    }
+                
+                    else
+                    {
+                        AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/student_dashboard.fxml"));
+                        background.getChildren().setAll(pane); 
+                    }
+                
+                }
+             
+            }
         }
-        else if(uname.equals("teacher") && pass.equals("teacher"))
-        {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/teacher_dashboard.fxml"));
-            background.getChildren().setAll(pane);
-            //JOptionPane.showMessageDialog(null, "Username or Password blank");
-            //flagx=true;            
-        }  
-        else if(uname.equals("admin") && pass.equals("admin"))
-        {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/admin_dashboard.fxml"));
-            background.getChildren().setAll(pane);
-            //JOptionPane.showMessageDialog(null, "Username or Password blank");
-            //flagx=true;            
-        }  
-        else
-        {
-            JOptionPane.showMessageDialog(null, "Wrong Username or Password");
-        }
+        
+            if(!flag && !flagx)
+            {
+                JOptionPane.showMessageDialog(null, "Wrong Username or Password");
+            }
              
     }
-    
+       
 }

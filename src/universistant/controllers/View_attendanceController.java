@@ -47,8 +47,7 @@ public class View_attendanceController implements Initializable {
         // TODO
     }    
 
-    @FXML
-    private void clickHome(ActionEvent event) throws IOException {
+    private void clickHomeViaStudent(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/resources/fxml/student_dashboard.fxml"));
         background.getChildren().setAll(pane);
     }
@@ -81,5 +80,7 @@ public class View_attendanceController implements Initializable {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
+
+    
     
 }
