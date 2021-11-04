@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="background" prefHeight="509.0" prefWidth="804.0" style="-fx-background-color: #008B8B;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universistant.controllers.Assign_courseController">
+   <stylesheets>
+      <URL value="@resources/style/stylesheet.css" />
+   </stylesheets>
+   <children>
+      <AnchorPane prefHeight="509.0" prefWidth="239.0" style="-fx-background-color: #20B2AA;">
+         <children>
+            <VBox layoutY="121.0" prefHeight="246.0" prefWidth="240.0" style="-fx-background-color: #ade8f4;">
+               <children>
+                  <Button fx:id="Home" mnemonicParsing="false" onAction="#clickHome" prefHeight="63.0" prefWidth="240.0" style="-fx-background-color: #48D1CC;" text="Home">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="HP Simplified" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Add_Student" mnemonicParsing="false" onAction="#clickAddStudent" prefHeight="62.0" prefWidth="241.0" style="-fx-background-color: #48D1CC;" text="Add Student">
+                     <font>
+                        <Font name="HP Simplified" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Add_Teacher" mnemonicParsing="false" onAction="#clickAddTeacher" prefHeight="62.0" prefWidth="240.0" style="-fx-background-color: #48D1CC;" text="Add Teacher">
+                     <font>
+                        <Font name="HP Simplified" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Add_Course" mnemonicParsing="false" onAction="#clickAddCourse" prefHeight="62.0" prefWidth="240.0" style="-fx-background-color: #48D1CC;" text="Add Course">
+                     <font>
+                        <Font name="HP Simplified" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Text fx:id="Assign_TeacherText" fill="WHITE" layoutX="435.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign Teacher" wrappingWidth="189.29000854492188">
+         <font>
+            <Font name="HP Simplified" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="DepartmentText" fill="#f8f8f8" layoutX="390.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department">
+         <font>
+            <Font name="HP Simplified" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#f8f8f8" layoutX="388.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher" wrappingWidth="61.652000427246094">
+         <font>
+            <Font name="HP Simplified" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#f8f8f8" layoutX="388.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Name">
+         <font>
+            <Font name="HP Simplified" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="Register" layoutX="464.0" layoutY="418.0" mnemonicParsing="false" onAction="#click_Register" prefHeight="25.0" prefWidth="132.0" style="-fx-background-radius: 5;" text="Register">
+         <font>
+            <Font name="HP Simplified" size="13.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="SelectDept" layoutX="548.0" layoutY="231.0" prefWidth="150.0" />
+      <ComboBox fx:id="SelectCID" layoutX="549.0" layoutY="293.0" onAction="#ClickCID" prefWidth="150.0" />
+      <ComboBox fx:id="SelectT" layoutX="548.0" layoutY="352.0" onAction="#ClickSelectT" prefWidth="150.0" />
+      <Button fx:id="loadButton" layoutX="713.0" layoutY="231.0" mnemonicParsing="false" onAction="#clickLoad" text="Load" />
+   </children>
+</AnchorPane>

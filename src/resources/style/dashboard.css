@@ -1,0 +1,62 @@
+/* Henlo */
+/*#Name 
+{
+    -fx-font-size : 47px;
+    -fx-font-family : HP Simplified;
+}*/
+
+#Home
+{
+-fx-background-color : #05071F;
+-fx-text-fill : #e7e5e5;
+-fx-font-size : 22px;
+}
+
+#Home:hover
+{
+-fx-background-color : #10165F;
+-fx-border-color: #E0F7FA;
+
+}
+
+#View_Marks
+{
+-fx-background-color : #05071F;
+-fx-text-fill : #e7e5e5;
+-fx-font-size : 22px;
+}
+
+#View_Marks:hover
+{
+-fx-background-color : #10165F;
+-fx-border-color: #E0F7FA;
+
+}
+
+#View_Attendance
+{
+-fx-background-color : #05071F;
+-fx-text-fill : #e7e5e5;
+-fx-font-size : 22px;
+}
+
+#View_Attendance:hover
+{
+-fx-background-color : #10165F;
+-fx-border-color: #E0F7FA;
+
+}
+
+#Exit
+{
+-fx-background-color : #05071F;
+-fx-text-fill : #e7e5e5;
+-fx-font-size : 22px;
+}
+
+#Exit:hover
+{
+-fx-background-color : #10165F;
+-fx-border-color: #E0F7FA;
+
+}

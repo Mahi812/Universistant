@@ -1,0 +1,15 @@
+.mainFxmlClass {
+    
+    .button{
+        
+        -fx-background-font : 24px;
+        -fx-font-family : HP Simplified;
+    }
+    
+/* -fx-background-color : -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color; */
+
+    .button:hover{
+        -fx-background-color :  #48D1CC, #E0F7FA, #dcdcdc, #40e0d0; 
+    }
+
+}
